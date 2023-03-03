@@ -20,16 +20,12 @@
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
-            android:id="@+id/action_login_to_profile"
-            app:destination="@id/profile" />
+            android:id="@+id/action_login_to_menu2"
+            app:destination="@id/menu2" />
     </fragment>
-    <fragment
-        android:id="@+id/profile"
-        android:name="com.example.week3.Profile"
-        android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" >
-        <action
-            android:id="@+id/action_profile_to_login"
-            app:destination="@id/login" />
-    </fragment>
+    <activity
+        android:id="@+id/menu2"
+        android:name="com.example.week3.Menu"
+        android:label="activity_menu"
+        tools:layout="@layout/activity_menu" />
 </navigation>

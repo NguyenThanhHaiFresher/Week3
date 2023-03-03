@@ -57,7 +57,7 @@ class Login : Fragment() {
                 Toast.makeText(activity,"Email or Password cannot be blanked", Toast.LENGTH_SHORT).show()
             }
             else if(checkemail == 1 && checkpassword == 1){
-                Navigation.findNavController(view).navigate(R.id.action_login_to_profile)
+                Navigation.findNavController(view).navigate(R.id.action_login_to_menu2)
             }
             else {
                 Toast.makeText(activity,"Wrong Email or Password", Toast.LENGTH_SHORT).show()
