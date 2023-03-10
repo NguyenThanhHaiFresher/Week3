@@ -87,11 +87,6 @@ class signup : Fragment() {
 
         })
 
-
-
-
-
-
         signup.setOnClickListener{
             sharedViewModel.saveEmail(email.text.toString())
             sharedViewModel.savePassword(password.text.toString())

@@ -36,11 +36,6 @@ class Login : Fragment() {
         var checkpassword = 0
         val sharedViewModel = ViewModelProvider(requireActivity()).get(SharedViewModel::class.java)
 
-
-
-
-
-
         signin.setOnClickListener{
             sharedViewModel.email.observe(viewLifecycleOwner, Observer {
                 if (email.text.toString() == it ) {
@@ -57,7 +52,7 @@ class Login : Fragment() {
                 Toast.makeText(activity,"Email or Password cannot be blanked", Toast.LENGTH_SHORT).show()
             }
             else if(checkemail == 1 && checkpassword == 1){
-                Navigation.findNavController(view).navigate(R.id.action_login_to_menu2)
+                Navigation.findNavController(view).navigate(R.id.action_login_to_menu3)
             }
             else {
                 Toast.makeText(activity,"Wrong Email or Password", Toast.LENGTH_SHORT).show()

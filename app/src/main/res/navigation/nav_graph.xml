@@ -3,9 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/signup">
+    app:startDestination="@id/splashScreen">
 
-    <fragment
+     <fragment
         android:id="@+id/signup"
         android:name="com.example.week3.signup"
         android:label="fragment_signup"
@@ -20,12 +20,74 @@
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
-            android:id="@+id/action_login_to_menu2"
-            app:destination="@id/menu2" />
+            android:id="@+id/action_login_to_menu3"
+            app:destination="@id/menu3" />
     </fragment>
-    <activity
-        android:id="@+id/menu2"
+    <fragment
+        android:id="@+id/splashScreen"
+        android:name="com.example.week3.SplashScreen"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen" >
+        <action
+            android:id="@+id/action_splashScreen_to_onboard1"
+            app:destination="@id/onboard1"
+            app:enterAnim="@anim/nav_default_enter_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/onboard1"
+        android:name="com.example.week3.Onboard1"
+        android:label="fragment_onboard1"
+        tools:layout="@layout/fragment_onboard1" >
+        <action
+            android:id="@+id/action_onboard1_to_onboard2"
+            app:destination="@id/onboard2" />
+    </fragment>
+    <fragment
+        android:id="@+id/onboard2"
+        android:name="com.example.week3.Onboard2"
+        android:label="fragment_onboard2"
+        tools:layout="@layout/fragment_onboard2" >
+        <action
+            android:id="@+id/action_onboard2_to_onboard3"
+            app:destination="@id/onboard3" />
+    </fragment>
+    <fragment
+        android:id="@+id/onboard3"
+        android:name="com.example.week3.Onboard3"
+        android:label="fragment_onboard3"
+        tools:layout="@layout/fragment_onboard3" >
+        <action
+            android:id="@+id/action_onboard3_to_welcome"
+            app:destination="@id/welcome" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcome"
+        android:name="com.example.week3.Welcome"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/action_welcome_to_signup"
+            app:destination="@id/signup" />
+    </fragment>
+    <fragment
+        android:id="@+id/profile"
+        android:name="com.example.week3.Profile"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profile_to_welcome"
+            app:destination="@id/welcome" />
+    </fragment>
+    <fragment
+        android:id="@+id/menu3"
         android:name="com.example.week3.Menu"
-        android:label="activity_menu"
-        tools:layout="@layout/activity_menu" />
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menu3_to_profile"
+            app:destination="@id/profile" />
+        <action
+            android:id="@+id/action_menu3_to_welcome"
+            app:destination="@id/welcome" />
+    </fragment>
 </navigation>

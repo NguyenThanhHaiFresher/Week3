@@ -32,4 +32,7 @@ class Adapter(var ds:List<Restaurant>):RecyclerView.Adapter<Adapter.MenuViewHold
     override fun getItemCount(): Int {
         return ds.size
     }
+
+
+
 }
